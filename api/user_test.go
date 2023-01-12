@@ -58,7 +58,7 @@ func TestCreateUserAPI(t *testing.T) {
 		{
 			name: "OK",
 			body: gin.H{
-				"username":  user.FullName,
+				"username":  user.Username,
 				"password":  password,
 				"full_name": user.FullName,
 				"email":     user.Email,
