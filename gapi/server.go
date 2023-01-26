@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	db "github.com/Nuriddin-Olimjon/simplebank/db/sqlc"
-	pb "github.com/Nuriddin-Olimjon/simplebank/pb"
+	"github.com/Nuriddin-Olimjon/simplebank/pb"
 	"github.com/Nuriddin-Olimjon/simplebank/token"
 	"github.com/Nuriddin-Olimjon/simplebank/util"
 )

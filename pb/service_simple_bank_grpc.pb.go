@@ -4,7 +4,7 @@
 // - protoc             v3.15.8
 // source: service_simple_bank.proto
 
-package proto
+package pb
 
 import (
 	context "context"
