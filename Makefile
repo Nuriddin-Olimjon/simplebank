@@ -44,6 +44,8 @@ proto:
 	--openapiv2_opt=allow_merge=true,merge_file_name=simple_bank \
 	proto/*.proto
 
+	statik -src=./docs/swagger -dest=./docs
+
 evans:
 	evans --host localhost --port 9090 -r repl
 

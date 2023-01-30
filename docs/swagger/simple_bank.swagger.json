@@ -4,7 +4,9 @@
     "title": "SimpleBank",
     "version": "1.0",
     "contact": {
-      "name": "Obidjonov Nuriddin"
+      "name": "gRPC-Gateway project",
+      "url": "https://github.com/grpc-ecosystem/grpc-gateway",
+      "email": "none@example.com"
     }
   },
   "tags": [
