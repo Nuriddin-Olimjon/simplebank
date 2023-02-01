@@ -11,22 +11,22 @@ services:
     volumes:
       - "pgdata:/var/lib/postgresql/data"
 
-  api:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        - HTTP_PROXY=${http_proxy}
-        - HTTPS_PROXY=${https_proxy}        
-    ports:
-      - "8080:8080"
-      - "9090:9090"
-    environment:
-      - DB_SOURCE=postgresql://root:secret@postgres:5432/simple_bank?sslmode=disable
-    depends_on:
-      - postgres
-    entrypoint: [ "/app/wait-for.sh", "postgres:5432", "--", "/app/start.sh" ]
-    command: go run main.go
+  # api:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #     args:
+  #       - HTTP_PROXY=${http_proxy}
+  #       - HTTPS_PROXY=${https_proxy}        
+  #   ports:
+  #     - "8080:8080"
+  #     - "9090:9090"
+  #   environment:
+  #     - DB_SOURCE=postgresql://root:secret@postgres:5432/simple_bank?sslmode=disable
+  #   depends_on:
+  #     - postgres
+  #   entrypoint: [ "/app/wait-for.sh", "postgres:5432", "--", "/app/start.sh" ]
+  #   command: go run main.go
 
 volumes:
   pgdata:
